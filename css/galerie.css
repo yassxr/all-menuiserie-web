@@ -1,0 +1,249 @@
+/* Gallery hero — same wave animation as home, but shorter */
+.galerie-hero {
+    min-height: 50vh;
+    width: 100vw;
+    background-image: linear-gradient(rgba(22,47,73,0.60), rgba(34,76,116,0.55)),
+                      url(../menuiserie-avenir-menuiserie-industrielle-pvc-alu-bois-1200x900.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    padding: 0 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.galerie-hero h1 {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 6.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: 0.04em;
+    text-shadow: 0 2px 14px rgba(0,0,0,0.40);
+    margin-top: 4rem;
+}
+
+.galerie-hero p {
+    color: rgba(255,255,255,0.85);
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    max-width: 60rem;
+    margin-top: 1.2rem;
+}
+
+/* Filter bar */
+.galerie-filter-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 3rem 2rem;
+    background: #f2f2f2;
+}
+
+.galerie-filter-btn {
+    padding: 0.7rem 2.4rem;
+    border: 2px solid var(--blue-primary);
+    background: transparent;
+    color: var(--blue-primary);
+    font-size: 1.4rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5rem;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s;
+}
+
+.galerie-filter-btn:hover,
+.galerie-filter-btn.active {
+    background: var(--blue-primary);
+    color: #fff;
+}
+
+/* Highlighted active nav link */
+.header .navbar ul li a.nav-active {
+    color: var(--blue-accent);
+    text-decoration: underline;
+}
+
+/* Masonry grid */
+.galerie-grid {
+    columns: 3;
+    column-gap: 8px;
+    padding: 0 8px 8px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1000px) { .galerie-grid { columns: 2; } }
+@media (max-width: 600px)  { .galerie-grid { columns: 1; } }
+
+.galerie-item {
+    break-inside: avoid;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 8px;
+    cursor: pointer;
+    display: block;
+}
+
+.galerie-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+    filter: brightness(0.92);
+}
+
+.galerie-item:hover img {
+    transform: scale(1.05);
+    filter: brightness(1);
+}
+
+.galerie-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(22,47,73,0.90) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.8rem;
+}
+
+.galerie-item:hover .galerie-overlay {
+    opacity: 1;
+}
+
+.galerie-overlay h3 {
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    text-transform: none;
+}
+
+.galerie-overlay span {
+    font-size: 1.1rem;
+    color: var(--blue-accent);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.galerie-zoom {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 3.8rem;
+    height: 3.8rem;
+    background: var(--blue-primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 1.4rem;
+    border-radius: 50%;
+}
+
+.galerie-item:hover .galerie-zoom {
+    opacity: 1;
+}
+
+/* Lightbox */
+.galerie-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 20, 35, 0.96);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.galerie-lightbox.open {
+    display: flex;
+}
+
+.galerie-lightbox-inner {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.galerie-lightbox-inner img {
+    max-width: 100%;
+    max-height: 78vh;
+    object-fit: contain;
+    box-shadow: 0 0 60px rgba(0,0,0,0.8);
+}
+
+.galerie-lb-caption {
+    margin-top: 1.2rem;
+    text-align: center;
+}
+
+.galerie-lb-caption h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.galerie-lb-caption span {
+    font-size: 1.1rem;
+    color: var(--blue-accent);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.galerie-lb-close {
+    position: absolute;
+    top: -3rem;
+    right: 0;
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    background: none;
+    border: none;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.galerie-lb-close:hover { color: var(--blue-accent); }
+
+.galerie-lb-prev,
+.galerie-lb-next {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.2rem;
+    color: #fff;
+    cursor: pointer;
+    background: rgba(22, 47, 73, 0.7);
+    border: none;
+    width: 5rem;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.galerie-lb-prev { left: 0.5rem; }
+.galerie-lb-next { right: 0.5rem; }
+
+.galerie-lb-prev:hover,
+.galerie-lb-next:hover { background: var(--blue-primary); }

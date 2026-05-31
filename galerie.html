@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie - All Menuiserie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800;900&display=swap">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/galerie.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="icon" href="./all.png">
+    <script src="./js/main.js"></script>
+</head>
+<body>
+
+    <!-- Same header as index -->
+    <header class="header">
+        <a href="index.html" class="logo"><img src="./all.png" alt="All Menuiserie"></a>
+        <div class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html#accueil">Accueil</a></li>
+                <li><a href="index.html#apropos">À Propos</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="galerie.html" class="nav-active">Galerie</a></li>
+                <li><a href="index.html#equipe">Équipe</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero banner reusing home section style -->
+    <section class="galerie-hero">
+        <h1>Notre Galerie</h1>
+        <p>Chaque photo raconte une histoire de bois, de passion et de savoir-faire artisanal.</p>
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+    </section>
+
+    <!-- Filter bar -->
+    <div class="galerie-filter-bar">
+        <button class="galerie-filter-btn active" data-filter="all">Tout Voir</button>
+        <button class="galerie-filter-btn" data-filter="charpente">Charpente</button>
+        <button class="galerie-filter-btn" data-filter="menuiserie">Menuiserie</button>
+        <button class="galerie-filter-btn" data-filter="renovation">Rénovation</button>
+        <button class="galerie-filter-btn" data-filter="atelier">Atelier</button>
+    </div>
+
+    <!-- Masonry grid -->
+    <div class="galerie-grid">
+
+        <div class="galerie-item" data-category="charpente"
+             data-src="./menuiserie-avenir-menuiserie-industrielle-pvc-alu-bois-1200x900.jpg"
+             data-title="Menuiserie Industrielle PVC-Alu-Bois" data-cat="Charpente">
+            <img src="./menuiserie-avenir-menuiserie-industrielle-pvc-alu-bois-1200x900.jpg" alt="Menuiserie industrielle" loading="lazy">
+            <div class="galerie-overlay">
+                <h3>Menuiserie Industrielle</h3>
+                <span>Charpente</span>
+            </div>
+            <div class="galerie-zoom"><i class="fas fa-search-plus"></i></div>
+        </div>
+
+        <div class="galerie-item" data-category="renovation"
+             data-src="./renovation-charpente-bois-31122019-1446.webp"
+             data-title="Rénovation Charpente Bois" data-cat="Rénovation">
+            <img src="./renovation-charpente-bois-31122019-1446.webp" alt="Rénovation charpente" loading="lazy">
+            <div class="galerie-overlay">
+                <h3>Rénovation Charpente</h3>
+                <span>Rénovation</span>
+            </div>
+            <div class="galerie-zoom"><i class="fas fa-search-plus"></i></div>
+        </div>
+
+        <div class="galerie-item" data-category="atelier"
+             data-src="./Mordant_DSC3828.jpg"
+             data-title="Atelier — Finitions Bois" data-cat="Atelier">
+            <img src="./Mordant_DSC3828.jpg" alt="Atelier menuiserie" loading="lazy">
+            <div class="galerie-overlay">
+                <h3>Atelier — Finitions Bois</h3>
+                <span>Atelier</span>
+            </div>
+            <div class="galerie-zoom"><i class="fas fa-search-plus"></i></div>
+        </div>
+
+        <div class="galerie-item" data-category="menuiserie"
+             data-src="./9767-menuiseries.jpg"
+             data-title="Menuiseries sur Mesure" data-cat="Menuiserie">
+            <img src="./9767-menuiseries.jpg" alt="Menuiseries" loading="lazy">
+            <div class="galerie-overlay">
+                <h3>Menuiseries sur Mesure</h3>
+                <span>Menuiserie</span>
+            </div>
+            <div class="galerie-zoom"><i class="fas fa-search-plus"></i></div>
+        </div>
+
+        <div class="galerie-item" data-category="menuiserie"
+             data-src="./menuiserie-bois.webp"
+             data-title="Menuiserie Bois Artisanale" data-cat="Menuiserie">
+            <img src="./menuiserie-bois.webp" alt="Menuiserie bois" loading="lazy">
+            <div class="galerie-overlay">
+                <h3>Menuiserie Bois</h3>
+                <span>Menuiserie</span>
+            </div>
+            <div class="galerie-zoom"><i class="fas fa-search-plus"></i></div>
+        </div>
+
+        <div class="galerie-item" data-category="charpente"
+             data-src="./menuiserie-57943376.webp"
+             data-title="Charpente — Vue d'Ensemble" data-cat="Charpente">
+            <img src="./menuiserie-57943376.webp" alt="Charpente bois" loading="lazy">
+            <div class="galerie-overlay">
+                <h3>Charpente — Vue d'Ensemble</h3>
+                <span>Charpente</span>
+            </div>
+            <div class="galerie-zoom"><i class="fas fa-search-plus"></i></div>
+        </div>
+
+        <div class="galerie-item" data-category="atelier"
+             data-src="./images/img1.jpg"
+             data-title="Pose en Chantier" data-cat="Atelier">
+            <img src="./images/img1.jpg" alt="Chantier menuiserie" loading="lazy">
+            <div class="galerie-overlay">
+                <h3>Pose en Chantier</h3>
+                <span>Atelier</span>
+            </div>
+            <div class="galerie-zoom"><i class="fas fa-search-plus"></i></div>
+        </div>
+
+        <div class="galerie-item" data-category="charpente"
+             data-src="./images/img2.jpg"
+             data-title="Structure Bois — Réalisation" data-cat="Charpente">
+            <img src="./images/img2.jpg" alt="Structure charpente" loading="lazy">
+            <div class="galerie-overlay">
+                <h3>Structure Bois</h3>
+                <span>Charpente</span>
+            </div>
+            <div class="galerie-zoom"><i class="fas fa-search-plus"></i></div>
+        </div>
+
+        <div class="galerie-item" data-category="renovation"
+             data-src="./images/img3.jpg"
+             data-title="Rénovation Intérieure" data-cat="Rénovation">
+            <img src="./images/img3.jpg" alt="Rénovation" loading="lazy">
+            <div class="galerie-overlay">
+                <h3>Rénovation Intérieure</h3>
+                <span>Rénovation</span>
+            </div>
+            <div class="galerie-zoom"><i class="fas fa-search-plus"></i></div>
+        </div>
+
+        <div class="galerie-item" data-category="menuiserie"
+             data-src="./images/faq.jpg"
+             data-title="Menuiserie Fine — Détail" data-cat="Menuiserie">
+            <img src="./images/faq.jpg" alt="Détail menuiserie" loading="lazy">
+            <div class="galerie-overlay">
+                <h3>Menuiserie Fine — Détail</h3>
+                <span>Menuiserie</span>
+            </div>
+            <div class="galerie-zoom"><i class="fas fa-search-plus"></i></div>
+        </div>
+
+    </div>
+
+    <!-- CTA strip matching the communicate section style -->
+    <div class="communicate">
+        <h3>Un projet de construction ou de rénovation en bois ?</h3>
+        <p>Obtenez votre devis gratuit en nous contactant dès aujourd'hui.</p>
+        <a href="index.html#contact"><button class="btn">Contactez-Nous</button></a>
+    </div>
+
+    <!-- Same footer as index -->
+    <div class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>À Propos</h4>
+                        <ul>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#accueil">Accueil</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#apropos">À Propos</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#services">Nos Services</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="#">Mentions Légales</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="#">Politique de Confidentialité</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Liens Utiles</h4>
+                        <ul>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="galerie.html">Galerie Photos</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#equipe">Notre Équipe</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#contact">Contact</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#faq">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-contact" style="font-size: 1.5rem;">
+                        <h4>Coordonnées</h4>
+                        <p>
+                            Zone Iguidar Drarga<br>
+                            Drargua, Agadir<br>
+                            Maroc<br>
+                            <strong>Tél :</strong> +212 5XX-XXXXXX<br>
+                            <strong>Email :</strong> contact@all-menuiserie.ma<br>
+                        </p>
+                        <div class="social-links">
+                            <a href="#"><i class="ion-logo-facebook"></i></a>
+                            <a href="#"><i class="ion-logo-instagram"></i></a>
+                            <a href="#"><i class="ion-logo-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-newsletter">
+                        <h4>Newsletter</h4>
+                        <p>Recevez nos actualités, conseils d'entretien du bois et offres spéciales directement dans votre boîte mail.</p>
+                        <form action="" method="post">
+                            <input type="email" name="email" placeholder="Votre e-mail"><input type="submit" value="S'abonner">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 copyright" style="color: #224c74; font-size: 1.3rem;">
+                    Copyright &copy; 2024 ALL MENUISERIE. Tous droits réservés.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
+
+    <!-- Lightbox -->
+    <div class="galerie-lightbox" id="lightbox">
+        <div class="galerie-lightbox-inner">
+            <button class="galerie-lb-close" id="lbClose">&times;</button>
+            <img src="" id="lbImg" alt="">
+            <div class="galerie-lb-caption">
+                <h3 id="lbTitle"></h3>
+                <span id="lbCat"></span>
+            </div>
+        </div>
+        <button class="galerie-lb-prev" id="lbPrev"><i class="fas fa-chevron-left"></i></button>
+        <button class="galerie-lb-next" id="lbNext"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script>
+        // Filter
+        const filterBtns = document.querySelectorAll('.galerie-filter-btn');
+        const items = document.querySelectorAll('.galerie-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const f = btn.dataset.filter;
+                items.forEach(item => {
+                    item.style.display = (f === 'all' || item.dataset.category === f) ? 'block' : 'none';
+                });
+            });
+        });
+
+        // Lightbox
+        const lb = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lbImg');
+        const lbTitle = document.getElementById('lbTitle');
+        const lbCat = document.getElementById('lbCat');
+        let currentIdx = 0;
+        let visibleItems = [];
+
+        function openLightbox(idx) {
+            visibleItems = [...items].filter(el => el.style.display !== 'none');
+            currentIdx = idx;
+            const item = visibleItems[currentIdx];
+            lbImg.src = item.dataset.src;
+            lbTitle.textContent = item.dataset.title;
+            lbCat.textContent = item.dataset.cat;
+            lb.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        items.forEach((item) => {
+            item.addEventListener('click', () => {
+                visibleItems = [...items].filter(el => el.style.display !== 'none');
+                const visIdx = visibleItems.indexOf(item);
+                openLightbox(visIdx >= 0 ? visIdx : 0);
+            });
+        });
+
+        function closeLightbox() {
+            lb.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('lbClose').addEventListener('click', closeLightbox);
+        lb.addEventListener('click', (e) => { if (e.target === lb) closeLightbox(); });
+
+        document.getElementById('lbPrev').addEventListener('click', () => {
+            currentIdx = (currentIdx - 1 + visibleItems.length) % visibleItems.length;
+            const item = visibleItems[currentIdx];
+            lbImg.src = item.dataset.src;
+            lbTitle.textContent = item.dataset.title;
+            lbCat.textContent = item.dataset.cat;
+        });
+
+        document.getElementById('lbNext').addEventListener('click', () => {
+            currentIdx = (currentIdx + 1) % visibleItems.length;
+            const item = visibleItems[currentIdx];
+            lbImg.src = item.dataset.src;
+            lbTitle.textContent = item.dataset.title;
+            lbCat.textContent = item.dataset.cat;
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!lb.classList.contains('open')) return;
+            if (e.key === 'ArrowLeft') document.getElementById('lbPrev').click();
+            if (e.key === 'ArrowRight') document.getElementById('lbNext').click();
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+</body>
+</html>
