@@ -1,6 +1,6 @@
 # All Menuiserie — Site Web
 
-Site vitrine pour **All Menuiserie**, une entreprise spécialisée dans la charpente en bois et la menuiserie, implantée à Drargua, Agadir, Maroc. Développé en HTML, CSS, JavaScript, Bootstrap 4 et PHP.
+Site vitrine pour **All Menuiserie**, une entreprise spécialisée dans la charpente en bois et la menuiserie, implantée à Agadir, Maroc. Développé en HTML, CSS, JavaScript, Bootstrap 4 et PHP.
 
 ## Pages
 
