@@ -1,61 +1,61 @@
 # All Menuiserie — Site Web
 
-Website for **All Menuiserie**, a carpentry and timber-frame company based in Drargua, Agadir, Morocco. Built with HTML, CSS, JavaScript, Bootstrap 4, and PHP.
+Site vitrine pour **All Menuiserie**, une entreprise spécialisée dans la charpente en bois et la menuiserie, implantée à Drargua, Agadir, Maroc. Développé en HTML, CSS, JavaScript, Bootstrap 4 et PHP.
 
 ## Pages
 
 | Page | Description |
 |---|---|
-| `index.html` | Main page — Home, About, Services, Team, Contact, FAQ |
-| `galerie.html` | Photo gallery of completed projects |
+| `index.html` | Page principale — Accueil, À Propos, Services, Équipe, Contact, FAQ |
+| `galerie.html` | Galerie photos des réalisations |
 
 ## Sections
 
-- **Accueil** — Hero banner with animated waves
-- **À Propos** — Company overview
-- **Services** — Timber framing, doors & windows, interior joinery
-- **Réalisations** — Portfolio highlights (villas, commercial, renovation)
-- **Équipe** — Team cards with social links
-- **Contact** — Google Maps embed + contact form (PHPMailer)
-- **FAQ** — Accordion with common questions
-- **Footer** — Links, coordinates, social links, newsletter form
+- **Accueil** — Bannière hero avec vagues animées
+- **À Propos** — Présentation de l'entreprise
+- **Services** — Charpente, portes & fenêtres, menuiserie intérieure
+- **Réalisations** — Portfolio (villas, locaux commerciaux, rénovation)
+- **Équipe** — Fiches équipe avec liens réseaux sociaux
+- **Contact** — Carte Google Maps + formulaire de contact (PHPMailer)
+- **FAQ** — Accordéon avec les questions fréquentes
+- **Pied de page** — Liens, coordonnées, réseaux sociaux, newsletter
 
-## Tech Stack
+## Technologies utilisées
 
 - HTML5 / CSS3
 - Bootstrap 4
-- jQuery + Owl Carousel (testimonials slider)
-- Font Awesome 5 (icons)
-- Ionicons 2 (footer/nav icons)
-- PHP + [PHPMailer](https://github.com/PHPMailer/PHPMailer) (contact form)
+- jQuery + Owl Carousel (carrousel de témoignages)
+- Font Awesome 5 (icônes)
+- Ionicons 2 (icônes footer/nav)
+- PHP + [PHPMailer](https://github.com/PHPMailer/PHPMailer) (formulaire de contact)
 
-## Running Locally
+## Lancer le projet en local
 
-**Static preview (no contact form):**
+**Aperçu statique (sans formulaire de contact) :**
 
 ```bash
 python3 -m http.server 8080
 ```
 
-Then open [http://localhost:8080](http://localhost:8080).
+Puis ouvrir [http://localhost:8080](http://localhost:8080).
 
-**Full PHP server (contact form enabled):**
+**Serveur PHP complet (formulaire de contact activé) :**
 
 ```bash
 php -S localhost:8080
 ```
 
-## Contact Form Setup
+## Configuration du formulaire de contact
 
-The contact form (`contactme.php`) uses PHPMailer. Before deploying:
+Le formulaire (`contactme.php`) utilise PHPMailer. Avant de déployer :
 
-1. Install dependencies:
+1. Installer les dépendances :
    ```bash
    composer install
    ```
-2. Set SMTP credentials in `mailing/mailingvariables.php`
-3. Set the recipient email in `contactme.php`
+2. Renseigner les identifiants SMTP dans `mailing/mailingvariables.php`
+3. Définir l'adresse e-mail destinataire dans `contactme.php`
 
-## License
+## Licence
 
 MIT
